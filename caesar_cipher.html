@@ -1,0 +1,768 @@
+<!--------------------------Style------------------------------>
+<style>
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+<!--------------------------HTML------------------------------>
+<body>
+  <div class="row">
+    <div>
+      <input id="number" type="number" value="0">
+      <input type="text" id="text">
+      <button id="submit">Try it</button>
+      <p id="print"></p>
+    </div>
+    <div class="center">
+      <img src="caesar_cipher.PNG" alt="billede" width="75%">
+    </div>
+  </div>
+</body>
+<!--------------------------Script------------------------------>
+<script>
+    /*--------------------------1------------------------------*/
+    let key1 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'b', b: 'c', c: 'd',
+      d: 'e', e: 'f', f: 'g',
+      g: 'h', h: 'i', i: 'j',
+      j: 'k', k: 'l', l: 'm',
+      m: 'n', n: 'o', o: 'p',
+      p: 'q', q: 'r', r: 's',
+      s: 't', t: 'u', u: 'v',
+      v: 'w', w: 'x', x: 'y',
+      y: 'z', z: 'a'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+
+    //return the output
+    return decipher;
+  }
+    /*--------------------------2------------------------------*/
+    let key2 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'c', b: 'd', c: 'e',
+      d: 'f', e: 'g', f: 'h',
+      g: 'i', h: 'j', i: 'k',
+      j: 'l', k: 'm', l: 'n',
+      m: 'o', n: 'p', o: 'q',
+      p: 'r', q: 's', r: 't',
+      s: 'u', t: 'v', u: 'w',
+      v: 'x', w: 'y', x: 'z',
+      y: 'a', z: 'b'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+    /*--------------------------3------------------------------*/
+    let key3 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'd', b: 'e', c: 'f',
+        d: 'g', e: 'h', f: 'i',
+        g: 'j', h: 'k', i: 'l',
+        j: 'm', k: 'n', l: 'o',
+        m: 'p', n: 'q', o: 'r',
+        p: 's', q: 't', r: 'u',
+        s: 'v', t: 'w', u: 'x',
+        v: 'y', w: 'z', x: 'a',
+        y: 'b', z: 'c'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------4------------------------------*/
+    let key4 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'e', b: 'f', c: 'g',
+        d: 'h', e: 'i', f: 'j',
+        g: 'k', h: 'l', i: 'm',
+        j: 'n', k: 'o', l: 'p',
+        m: 'q', n: 'r', o: 's',
+        p: 't', q: 'u', r: 'v',
+        s: 'w', t: 'x', u: 'y',
+        v: 'z', w: 'a', x: 'b',
+        y: 'c', z: 'd'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------5------------------------------*/
+    let key5 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'f', b: 'g', c: 'h',
+        d: 'i', e: 'j', f: 'k',
+        g: 'l', h: 'm', i: 'n',
+        j: 'o', k: 'p', l: 'q',
+        m: 'r', n: 's', o: 't',
+        p: 'u', q: 'v', r: 'w',
+        s: 'x', t: 'y', u: 'z',
+        v: 'a', w: 'b', x: 'c',
+        y: 'd', z: 'e'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------6------------------------------*/
+    let key6 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'g', b: 'h', c: 'i',
+        d: 'j', e: 'k', f: 'l',
+        g: 'm', h: 'n', i: 'o',
+        j: 'p', k: 'q', l: 'r',
+        m: 's', n: 't', o: 'u',
+        p: 'v', q: 'w', r: 'x',
+        s: 'y', t: 'z', u: 'a',
+        v: 'b', w: 'c', x: 'd',
+        y: 'e', z: 'f'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------7------------------------------*/
+    let key7 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'h', b: 'i', c: 'j',
+        d: 'k', e: 'l', f: 'm',
+        g: 'n', h: 'o', i: 'p',
+        j: 'q', k: 'r', l: 's',
+        m: 't', n: 'u', o: 'v',
+        p: 'w', q: 'x', r: 'y',
+        s: 'z', t: 'a', u: 'b',
+        v: 'c', w: 'd', x: 'e',
+        y: 'f', z: 'g'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        /*decipher += decoded[str[i%str.length]]; Mortens forsøg på Miles sætning*/
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------8------------------------------*/
+    let key8 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'i', b: 'j', c: 'k',
+        d: 'l', e: 'm', f: 'n',
+        g: 'o', h: 'p', i: 'q',
+        j: 'r', k: 's', l: 't',
+        m: 'u', n: 'v', o: 'w',
+        p: 'x', q: 'y', r: 'z',
+        s: 'a', t: 'b', u: 'c',
+        v: 'd', w: 'e', x: 'f',
+        y: 'g', z: 'h'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------9------------------------------*/
+    let key9 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'j', b: 'k', c: 'l',
+        d: 'm', e: 'n', f: 'o',
+        g: 'p', h: 'q', i: 'r',
+        j: 's', k: 't', l: 'u',
+        m: 'v', n: 'w', o: 'x',
+        p: 'y', q: 'z', r: 'a',
+        s: 'b', t: 'c', u: 'd',
+        v: 'e', w: 'f', x: 'g',
+        y: 'h', z: 'i'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------10------------------------------*/
+    let key10 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'k', b: 'l', c: 'm',
+        d: 'n', e: 'o', f: 'p',
+        g: 'q', h: 'r', i: 's',
+        j: 't', k: 'u', l: 'v',
+        m: 'w', n: 'x', o: 'y',
+        p: 'z', q: 'a', r: 'b',
+        s: 'c', t: 'd', u: 'e',
+        v: 'f', w: 'g', x: 'h',
+        y: 'i', z: 'j'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------11------------------------------*/
+    let key11 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'l', b: 'm', c: 'n',
+        d: 'o', e: 'p', f: 'q',
+        g: 'r', h: 's', i: 't',
+        j: 'u', k: 'v', l: 'w',
+        m: 'x', n: 'y', o: 'z',
+        p: 'a', q: 'b', r: 'c',
+        s: 'd', t: 'e', u: 'f',
+        v: 'g', w: 'h', x: 'i',
+        y: 'j', z: 'k'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------12------------------------------*/
+    let key12 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'm', b: 'n', c: 'o',
+        d: 'p', e: 'q', f: 'r',
+        g: 's', h: 't', i: 'u',
+        j: 'v', k: 'w', l: 'x',
+        m: 'y', n: 'z', o: 'a',
+        p: 'b', q: 'c', r: 'd',
+        s: 'e', t: 'f', u: 'g',
+        v: 'h', w: 'i', x: 'j',
+        y: 'k', z: 'l'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------13------------------------------*/
+    let key13 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'n', b: 'o', c: 'p',
+      d: 'q', e: 'r', f: 's',
+      g: 't', h: 'u', i: 'v',
+      j: 'w', k: 'x', l: 'y',
+      m: 'z', n: 'a', o: 'b',
+      p: 'c', q: 'd', r: 'e',
+      s: 'f', t: 'g', u: 'h',
+      v: 'i', w: 'j', x: 'k',
+      y: 'l', z: 'm'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+  /*--------------------------14------------------------------*/
+  let key14 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'o', b: 'p', c: 'q',
+      d: 'r', e: 's', f: 't',
+      g: 'u', h: 'v', i: 'w',
+      j: 'x', k: 'y', l: 'z',
+      m: 'a', n: 'b', o: 'c',
+      p: 'd', q: 'e', r: 'f',
+      s: 'g', t: 'h', u: 'i',
+      v: 'j', w: 'k', x: 'l',
+      y: 'm', z: 'n'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+  /*--------------------------15------------------------------*/
+  let key15 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'p', b: 'q', c: 'r',
+      d: 's', e: 't', f: 'u',
+      g: 'v', h: 'w', i: 'x',
+      j: 'y', k: 'z', l: 'a',
+      m: 'b', n: 'c', o: 'd',
+      p: 'e', q: 'f', r: 'g',
+      s: 'h', t: 'i', u: 'j',
+      v: 'k', w: 'l', x: 'm',
+      y: 'n', z: 'o'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+  /*--------------------------16------------------------------*/
+  let key16 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'q', b: 'r', c: 's',
+      d: 't', e: 'u', f: 'v',
+      g: 'w', h: 'x', i: 'y',
+      j: 'z', k: 'a', l: 'b',
+      m: 'c', n: 'd', o: 'e',
+      p: 'f', q: 'g', r: 'h',
+      s: 'i', t: 'j', u: 'k',
+      v: 'l', w: 'm', x: 'n',
+      y: 'o', z: 'p'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+  /*--------------------------17------------------------------*/
+  let key17 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'r', b: 's', c: 't',
+      d: 'u', e: 'v', f: 'w',
+      g: 'x', h: 'y', i: 'z',
+      j: 'a', k: 'b', l: 'c',
+      m: 'd', n: 'e', o: 'f',
+      p: 'g', q: 'h', r: 'i',
+      s: 'j', t: 'k', u: 'l',
+      v: 'm', w: 'n', x: 'o',
+      y: 'p', z: 'q'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+  /*--------------------------18------------------------------*/
+  let key18 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 's', b: 't', c: 'u',
+      d: 'v', e: 'w', f: 'x',
+      g: 'y', h: 'z', i: 'a',
+      j: 'b', k: 'c', l: 'd',
+      m: 'e', n: 'f', o: 'g',
+      p: 'h', q: 'i', r: 'j',
+      s: 'k', t: 'l', u: 'm',
+      v: 'n', w: 'o', x: 'p',
+      y: 'q', z: 'r'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+  /*--------------------------19------------------------------*/
+  let key19 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 't', b: 'u', c: 'v',
+      d: 'w', e: 'x', f: 'y',
+      g: 'z', h: 'a', i: 'b',
+      j: 'c', k: 'd', l: 'e',
+      m: 'f', n: 'g', o: 'h',
+      p: 'i', q: 'j', r: 'k',
+      s: 'l', t: 'm', u: 'n',
+      v: 'o', w: 'p', x: 'q',
+      y: 'r', z: 's'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+   /*--------------------------20------------------------------*/
+   let key20 = (str) => {
+    //Deciphered reference letters
+    let decoded = {
+      a: 'u', b: 'v', c: 'w',
+      d: 'x', e: 'y', f: 'z',
+      g: 'a', h: 'b', i: 'c',
+      j: 'd', k: 'e', l: 'f',
+      m: 'g', n: 'h', o: 'i',
+      p: 'j', q: 'k', r: 'l',
+      s: 'm', t: 'n', u: 'o',
+      v: 'p', w: 'q', x: 'r',
+      y: 's', z: 't'    
+    }
+    
+    //convert the string to lowercase
+    str = str.toLowerCase();
+    
+    //decipher the code
+    let decipher = '';
+    for(let i = 0 ; i < str.length; i++){
+      decipher += decoded[str[i]];
+    }
+    
+    //return the output
+    return decipher;
+  }
+    /*--------------------------21------------------------------*/
+    let key21 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'v', b: 'w', c: 'x',
+        d: 'y', e: 'z', f: 'a',
+        g: 'b', h: 'c', i: 'd',
+        j: 'e', k: 'f', l: 'g',
+        m: 'h', n: 'i', o: 'j',
+        p: 'k', q: 'l', r: 'm',
+        s: 'n', t: 'o', u: 'p',
+        v: 'q', w: 'r', x: 's',
+        y: 't', z: 'u'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------22------------------------------*/
+    let key22 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'w', b: 'x', c: 'y',
+        d: 'z', e: 'a', f: 'b',
+        g: 'c', h: 'd', i: 'e',
+        j: 'f', k: 'g', l: 'h',
+        m: 'i', n: 'j', o: 'k',
+        p: 'l', q: 'm', r: 'n',
+        s: 'o', t: 'p', u: 'q',
+        v: 'r', w: 's', x: 't',
+        y: 'u', z: 'v'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------23------------------------------*/
+    let key23 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'x', b: 'y', c: 'z',
+        d: 'a', e: 'b', f: 'c',
+        g: 'd', h: 'e', i: 'f',
+        j: 'g', k: 'h', l: 'i',
+        m: 'j', n: 'k', o: 'l',
+        p: 'm', q: 'n', r: 'o',
+        s: 'p', t: 'q', u: 'r',
+        v: 's', w: 't', x: 'u',
+        y: 'v', z: 'w'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------24------------------------------*/
+    let key24 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'y', b: 'z', c: 'a',
+        d: 'b', e: 'c', f: 'd',
+        g: 'e', h: 'f', i: 'g',
+        j: 'h', k: 'i', l: 'j',
+        m: 'k', n: 'l', o: 'm',
+        p: 'n', q: 'o', r: 'p',
+        s: 'q', t: 'r', u: 's',
+        v: 't', w: 'u', x: 'v',
+        y: 'w', z: 'x'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+    /*--------------------------25------------------------------*/
+    let key25 = (str) => {
+        //Deciphered reference letters
+        let decoded = {
+        a: 'z', b: 'a', c: 'b',
+        d: 'c', e: 'd', f: 'e',
+        g: 'f', h: 'g', i: 'h',
+        j: 'i', k: 'j', l: 'k',
+        m: 'l', n: 'm', o: 'n',
+        p: 'o', q: 'p', r: 'q',
+        s: 'r', t: 's', u: 't',
+        v: 'u', w: 'v', x: 'w',
+        y: 'x', z: 'y'    
+        }
+        
+        //convert the string to lowercase
+        str = str.toLowerCase();
+        
+        //decipher the code
+        let decipher = '';
+        for(let i = 0 ; i < str.length; i++){
+        decipher += decoded[str[i]];
+        }
+        
+        //return the output
+        return decipher;
+    }
+  /*--------------------------Print------------------------------*/
+
+  document.getElementById('submit').addEventListener('click', ()=> {
+    let number = document.getElementById('number').value;
+    if(number === '1'){
+        document.getElementById("print").innerHTML = key1(document.getElementById('text').value);
+    } else if (number === '2'){
+        document.getElementById("print").innerHTML = key2(document.getElementById('text').value);
+    } else if (number === '3'){
+        document.getElementById("print").innerHTML = key3(document.getElementById('text').value);
+    } else if (number === '4'){
+        document.getElementById("print").innerHTML = key4(document.getElementById('text').value);
+    } else if (number === '5'){
+        document.getElementById("print").innerHTML = key5(document.getElementById('text').value);
+    } else if (number === '6'){
+        document.getElementById("print").innerHTML = key6(document.getElementById('text').value);
+    } else if (number === '7'){
+        document.getElementById("print").innerHTML = key7(document.getElementById('text').value);
+    } else if (number === '8'){
+        document.getElementById("print").innerHTML = key8(document.getElementById('text').value);
+    } else if (number === '9'){
+        document.getElementById("print").innerHTML = key9(document.getElementById('text').value);
+    } else if (number === '10'){
+        document.getElementById("print").innerHTML = key10(document.getElementById('text').value);
+    } else if (number === '11'){
+        document.getElementById("print").innerHTML = key11(document.getElementById('text').value);
+    } else if (number === '12'){
+        document.getElementById("print").innerHTML = key12(document.getElementById('text').value);
+    } else if (number === '13'){
+        document.getElementById("print").innerHTML = key13(document.getElementById('text').value);
+    } else if (number === '14'){
+        document.getElementById("print").innerHTML = key14(document.getElementById('text').value);
+    } else if (number === '15'){
+        document.getElementById("print").innerHTML = key15(document.getElementById('text').value);
+    } else if (number === '16'){
+        document.getElementById("print").innerHTML = key16(document.getElementById('text').value);
+    } else if (number === '17'){
+        document.getElementById("print").innerHTML = key17(document.getElementById('text').value);
+    } else if (number === '18'){
+        document.getElementById("print").innerHTML = key18(document.getElementById('text').value);
+    } else if (number === '19'){
+        document.getElementById("print").innerHTML = key19(document.getElementById('text').value);
+    } else if (number === '20'){
+        document.getElementById("print").innerHTML = key20(document.getElementById('text').value);
+    } else if (number === '21'){
+        document.getElementById("print").innerHTML = key21(document.getElementById('text').value);
+    } else if (number === '22'){
+        document.getElementById("print").innerHTML = key22(document.getElementById('text').value);
+    } else if (number === '23'){
+        document.getElementById("print").innerHTML = key23(document.getElementById('text').value);
+    } else if (number === '24'){
+        document.getElementById("print").innerHTML = key24(document.getElementById('text').value);
+    } else if (number === '25'){
+        document.getElementById("print").innerHTML = key25(document.getElementById('text').value);
+    }
+  });  
+ 
+  /*--------------------------Console.log------------------------------*/
+
+//console.log(key13('attackatonce'));
+//console.log(key13('prashantyadav'));
+
+
+</script>
